@@ -9,10 +9,21 @@ union() {
         }
         // translate ([0, 0, 20 - 4.2 - 1]) rotate ([0, 90, 90]) cylinder(30, 20,20, true, $fn=64);
     }
+    
+    // Bottom bottom, connected to plate
     translate ([0, 0, 31.3 / 2]) scale ([4.3, 5.53, 31.3]) cube(1, true);
+    
+    // Wider post part
     translate ([0, 0, 24.5 / 2 + 31.3 - 24.5]) scale ([4.3, 7.05, 24.5]) cube(1, true);
+    
+    // Top (widest) post part
     translate ([(6.75 - 4.3) / 2, 0, 19.3 / 2 + 31.3 - 19.3]) scale ([6.75, 7.05, 19.3]) cube(1, true);
+    
+    // Spring protrusion
     translate ([(7.05 - 4.3) / 2,0,6.75]) rotate ([0, 90, 0]) cylinder(7.05, 2, 2, true, $fn=16);
+    
+    // Bottom enforcer cylinder
+    translate ([2.15, 0, 0])  rotate ([0, 90, 90]) cylinder(5.53, 2, 2, true, $fn=16);
 }
 
 
