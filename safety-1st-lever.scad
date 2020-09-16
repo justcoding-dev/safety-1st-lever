@@ -1,3 +1,22 @@
+// safety-1st-lever
+// Version 4
+//
+// Opening lever for "Safety 1st" child barriers
+//
+// The original levers tend to break after a while of use, so it's a good idea to keep a few spares
+// around.
+//
+// Copyright (c) 2019 regenschein71
+// https://github.com/regenschein71/safety-1st-lever
+
+
+// Set this to true to rotate the lever onto the long flat side with the knob
+// for the spring pointing up. This needs supports, but will result in a much cleaner 
+// knob print.
+knob_side_up = true;
+
+
+rotate([0,knob_side_up ? -90 : 0,0])
 union() {
     intersection() {
         difference() {
